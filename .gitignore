@@ -1,0 +1,43 @@
+# ---- IDE / Editor ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ---- OS generated ----
+Thumbs.db
+Desktop.ini
+.DS_Store
+ehthumbs.db
+
+# ---- Logs & temp ----
+*.log
+*.tmp
+*.bak
+*.old
+
+# ---- PHP / server artifacts ----
+error_log
+*.cache
+
+# ---- Database dumps & local backups ----
+*.sql.bak
+*.sqlite
+
+# ---- Credentials (IMPORTANT) ----
+# If config.php contains production DB password, ignore it and commit
+# a sample instead (config.sample.php). For coursework with empty
+# XAMPP root password it's OK to commit config.php as-is.
+# config.php
+
+# ---- Node / build artifacts (not used now, but just in case) ----
+node_modules/
+dist/
+build/
+
+# ---- Submission screenshots / test artifacts ----
+test_screenshot_*.png
+_verify.sql
+_r*.html

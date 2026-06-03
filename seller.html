@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Center - AutoMarket</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="index.html">AutoMarket</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="seller.html">Seller</a></li>
+                    <li><a href="search.html">Search Cars</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <?php
+    session_start();
+    $logged_in = isset($_SESSION['seller_id']);
+    ?>
+    <section class="hero" style="background-color: #27ae60;">
+        <div class="container">
+            <h1>Seller Center</h1>
+            <p>Manage your car listings and reach potential buyers across China.</p>
+            <?php if (isset($_GET['success'])): ?>
+                <div class="success-message" style="background-color: #27ae60; color: white; padding: 10px; margin-top: 20px; border-radius: 4px; display: block;">
+                    <p><?php echo htmlspecialchars($_GET['success']); ?></p>
+                </div>
+            <?php endif; ?>
+            <?php if (!$logged_in): ?>
+                <p style="margin-top: 20px;">You must be logged in to access seller features.</p>
+            <?php endif; ?>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <h2 class="page-title">Seller Services</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Register as Seller</h3>
+                    <p>Create your seller account to start advertising your cars on our platform.</p>
+                    <a href="register.php" class="btn">Register Now</a>
+                </div>
+                <div class="card">
+                    <h3>Login</h3>
+                    <p>Already have an account? Sign in to manage your listings.</p>
+                    <a href="login.php" class="btn">Login</a>
+                </div>
+                <div class="card">
+                    <h3>Add New Car</h3>
+                    <p>List a new car for sale. Provide details like model, year, color, and price.</p>
+                    <a href="add-car.php" class="btn">Add Car</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AutoMarket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Cars - AutoMarket</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="index.html">AutoMarket</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="seller.html">Seller</a></li>
+                    <li><a href="search.html">Search Cars</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="background-color: #e67e22;">
+        <div class="container">
+            <h1>Find Your Perfect Car</h1>
+            <p>Search by model and year to find the car that fits your needs.</p>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="search-box">
+                <form method="GET" action="search.php">
+                    <input type="text" id="search-model" name="model" placeholder="Enter car model (e.g., Toyota, BMW)">
+                    <input type="text" id="search-year" name="year" placeholder="Enter year (e.g., 2020)">
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+
+            <div id="search-results" class="car-list">
+            </div>
+        </div>
+    </section>
+
+    <div id="car-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AutoMarket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
