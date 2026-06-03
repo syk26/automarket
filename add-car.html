@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Car - AutoMarket</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="index.html">AutoMarket</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="seller.html">Seller</a></li>
+                    <li><a href="search.html">Search Cars</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-content">
+        <div class="container">
+            <h2 class="page-title">Add Your Car</h2>
+            <div class="form-container">
+                <form id="add-car-form" method="POST" action="add-car.php">
+                    <div class="form-group">
+                        <label for="colour">Colour</label>
+                        <input type="text" id="colour" name="colour" placeholder="Enter car colour">
+                        <span class="error-message">Please enter a colour.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" id="model" name="model" placeholder="Enter car model (e.g., Toyota Camry)">
+                        <span class="error-message">Please enter a model.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="text" id="year" name="year" placeholder="Enter manufacture year (e.g., 2020)">
+                        <span class="error-message">Please enter a valid 4-digit year.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" placeholder="Enter car location">
+                        <span class="error-message">Please enter a location.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price (CNY)</label>
+                        <input type="text" id="price" name="price" placeholder="Enter price in CNY">
+                        <span class="error-message">Please enter a valid price (numbers only).</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Car Image</label>
+                        <input type="file" id="image" name="image" accept="image/*">
+                        <span class="error-message">Please upload an image.</span>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Add Car</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AutoMarket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
